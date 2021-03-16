@@ -1,1 +1,11 @@
 buildPack: typescript
+pipelineConfig: 
+ pipelines:
+   release:
+    build:
+     replace: true
+     steps:
+     - name: npm install
+       sh: npm install
+     - name: container build
+       sh: export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml
