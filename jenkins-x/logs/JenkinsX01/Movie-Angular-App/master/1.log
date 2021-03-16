@@ -1,0 +1,57 @@
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615893473.746428,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkinsx01-movie-angular-app-ma-gw7hm-llssf[0m
+{"level":"info","ts":1615893485.3535426,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/JenkinsX01/Movie-Angular-App.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1615893485.3536365,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1615893485.4028447,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> core-js@3.6.4 postinstall /workspace/source/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> @angular/cli@9.0.7 postinstall /workspace/source/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1374 packages from 1127 contributors and audited 1379 packages in 45.805s
+found 9 vulnerabilities (6 low, 1 moderate, 2 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-gw7hm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> movie-rating-app@0.0.0 test /workspace/source
+> ng test
+
+Node.js version v11.15.0 detected.
+The Angular CLI requires a minimum Node.js version of either v10.13 or v12.0.
+
+Please update your Node.js version or visit https://nodejs.org/ for additional instructions.
+npm ERR! Test failed.  See above for more details.
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-npm-test'. The execution of the pipeline has stopped.[0m
