@@ -1,0 +1,111 @@
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615900613.7706196,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkinsx01-movie-angular-app-ma-8p9lg-bfjvg[0m
+{"level":"info","ts":1615900623.7030118,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/JenkinsX01/Movie-Angular-App.git @ v0.0.3 in path /workspace/source"}
+{"level":"warn","ts":1615900623.7031147,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1615900623.7556267,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a2d8d4b407f9cf52337527a7e3371b50165424e8
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> core-js@3.6.4 postinstall /workspace/source/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> @angular/cli@9.0.7 postinstall /workspace/source/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1374 packages from 1127 contributors and audited 1379 packages in 52.273s
+found 9 vulnerabilities (6 low, 1 moderate, 2 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0316 13:17:58.742641      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] Checking for cached layer karriacr.azurecr.io/todo/cache:0890436c6f52e60b7f039131ceaf1d8fda77b73cc092862bd301ebbbe657ae12... 
+[36mINFO[0m[0015] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0015] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0020] ENV PORT 8080                                
+[36mINFO[0m[0020] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0020] EXPOSE 8080                                  
+[36mINFO[0m[0020] cmd: EXPOSE                                  
+[36mINFO[0m[0020] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0020] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0020] WORKDIR /usr/src/app                         
+[36mINFO[0m[0020] cmd: workdir                                 
+[36mINFO[0m[0020] Changed working directory to /usr/src/app    
+[36mINFO[0m[0020] Creating directory /usr/src/app              
+[36mINFO[0m[0020] Resolving 1 paths                            
+[36mINFO[0m[0020] Taking snapshot of files...                  
+[36mINFO[0m[0028] COPY . .                                     
+[36mINFO[0m[0056] Resolving 69001 paths                        
+[36mINFO[0m[0062] Taking snapshot of files...                  
+[36mINFO[0m[0078] Pushing layer karriacr.azurecr.io/todo/cache:0890436c6f52e60b7f039131ceaf1d8fda77b73cc092862bd301ebbbe657ae12 to cache now 
+[36mINFO[0m[0078] CMD ["npm", "start"]                         
+[36mINFO[0m[0078] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/movie-angular-app to an unshallow repository
+Generating change log from git ref 2dc2d8d81d57f74552cd3f68d0225cc6b4432240 => e33632df1a46a304cb958022ca1f7786eb250bb2
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for JenkinsX01/Movie-Angular-App and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/JenkinsX01/Movie-Angular-App/releases/tag/v0.0.3
+generated: /workspace/source/charts/movie-angular-app/templates/release.yaml
+Created Release movie-angular-app-0-0-3 resource in namespace **
+Updating PipelineActivity jenkinsx01-movie-angular-app-master-3 with version 0.0.3
+Updated PipelineActivities jenkinsx01-movie-angular-app-master-3 with release notes URL: https://github.com/JenkinsX01/Movie-Angular-App/releases/tag/v0.0.3
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file movie-angular-app-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjenkinsx01-movie-angular-app-ma-8p9lg-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app movie-angular-app version 0.0.3 to namespace **-staging
+Created Pull Request: https://github.com/JenkinsX01/environment-**akscluster-staging/pull/20
+Added label updatebot to Pull Request https://github.com/JenkinsX01/environment-**akscluster-staging/pull/20
+got git provider status pending from PR https://github.com/JenkinsX01/environment-**akscluster-staging/pull/20
+Pull Request https://github.com/JenkinsX01/environment-**akscluster-staging/pull/20 is merged at sha 7daa5d69e1eed86ea9b8c9f9e5965ff35c246b8b
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names movie-angular-app, **-movie-angular-app, **-staging-movie-angular-app
