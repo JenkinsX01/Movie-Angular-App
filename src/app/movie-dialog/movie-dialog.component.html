@@ -1,0 +1,59 @@
+<form [formGroup]="movieForm">
+  <button style="color: rgb(104, 235, 72)" mat-raised-button (click)="saveMovie()"><mat-icon>save</mat-icon></button>
+ 
+  <button style="color: rgb(226, 46, 82);margin-left: 4%" mat-raised-button (click)="onCancel()"><mat-icon>close</mat-icon></button>
+  <br>
+    <mat-form-field color="accent">
+      <mat-label>Movie Name</mat-label>
+      <input matInput placeholder="" value="" formControlName="moviename">
+    </mat-form-field>
+  
+    <mat-form-field  color="accent">
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Ex. Movie about..." formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+      Want to Add More Info?
+        </mat-panel-title>
+        
+      </mat-expansion-panel-header>
+      <mat-form-field color="primary">
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="" value="" formControlName="moviename">
+      </mat-form-field>
+    
+      <div>
+        <div>
+           <label>Rating:</label>
+        </div>
+        <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+      </div>
+      
+    </mat-expansion-panel>
+    </mat-accordion> 
+    
+    
+  </form>
+  
+ 
+    <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+     Do You Want Add More Info??
+    </mat-panel-title>
+    <mat-panel-description>
+       
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  
+  
+</mat-expansion-panel>-->
+
+
+
+ 

@@ -1,0 +1,14 @@
+<div *ngFor="let data of movies">
+  <mat-card style="background-color: rgb(64, 8, 155);">
+    <div style="color: rgb(241, 236, 226)"><strong>{{data.movieName}}</strong></div>
+    <div style="color: rgb(241, 236, 226);font-family: cursive">{{data.description}}</div>
+    <div style="color: rgb(241, 236, 226)">{{data.rating}}</div>
+  </mat-card>
+  <br>
+</div>
+
+<div>
+    <button mat-raised-button (click)="openDialog()" color="accent">Add Movies</button>
+</div>
+
+
